@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Tend.ai</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif; background: #1A1A1A; color: #E5E5E5; line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+    h1 { font-size: 32px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px; }
+    .updated { color: #999; font-size: 14px; margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 600; color: #C9A74A; margin-top: 36px; margin-bottom: 12px; }
+    p, li { font-size: 16px; color: #CCCCCC; margin-bottom: 12px; }
+    ul { padding-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    a { color: #C9A74A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .brand { color: #C9A74A; font-weight: 600; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #333; color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: February 27, 2026</p>
+
+    <p><span class="brand">Tend.ai</span> ("we", "our", "us") is an AI-powered care coordination app. We are committed to protecting your privacy and being transparent about how we handle your data.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p><strong>Account Information:</strong> Phone number, display name, and optional email address. We use phone-based authentication via one-time passwords (OTP).</p>
+    <p><strong>Circle Data:</strong> Circle names, membership roles, check-in questions and responses, and AI-generated summaries and nudges.</p>
+    <p><strong>Health Data (Optional):</strong> If you opt in, Tend.ai reads daily health summaries from Apple Health (iOS) or Health Connect (Android). Only aggregated daily averages (steps, heart rate, sleep hours) are shared with your care circles — raw health data never leaves your device.</p>
+    <p><strong>Vault Data:</strong> Files, messages, and documents you store in your Vault are encrypted with AES-256-GCM on your device before being uploaded. We cannot read your Vault contents.</p>
+    <p><strong>Device Information:</strong> Expo push token for notifications, device timezone, and preferred language.</p>
+    <p><strong>Location Data:</strong> Only collected when you voluntarily activate the Panic Button. Location is shared exclusively with your circle members during an active emergency.</p>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>Deliver check-in prompts and process responses</li>
+      <li>Generate AI-powered nudges, summaries, and alerts</li>
+      <li>Send push notifications for check-ins, alerts, and nudges</li>
+      <li>Detect patterns (missed check-ins, declining wellness trends)</li>
+      <li>Enforce subscription features (free vs. Pro tiers)</li>
+      <li>Improve app performance and fix bugs (via anonymized crash reports)</li>
+    </ul>
+
+    <h2>3. AI Processing</h2>
+    <p>Tend.ai uses AI to analyze check-in patterns and generate nudges. AI-generated content is clearly labeled. The AI never contacts your circle members directly — it only nudges <em>you</em> to take action.</p>
+    <p>If you use the "Tend AI" provider, your check-in data is processed by our cloud AI service. If you use "Your Own API Key," prompts go directly from your phone to your chosen provider (OpenAI or Anthropic). If you choose "Native AI," processing happens entirely on your device.</p>
+
+    <h2>4. Data Sharing</h2>
+    <p>We do <strong>not</strong> sell, rent, or share your personal data with advertisers or data brokers. Period.</p>
+    <p>Your data is shared only with:</p>
+    <ul>
+      <li><strong>Your circle members</strong> — check-in responses, health summaries (if opted in), and alerts are visible to members of circles you join.</li>
+      <li><strong>Service providers</strong> — Supabase (database hosting), Expo (push notifications), and Sentry (crash reporting). These providers process data only on our behalf under strict data processing agreements.</li>
+    </ul>
+
+    <h2>5. Data Security</h2>
+    <ul>
+      <li>All data in transit is encrypted via TLS 1.3</li>
+      <li>Vault contents are encrypted with AES-256-GCM before leaving your device</li>
+      <li>PIN hashes are verified server-side and never transmitted to client devices</li>
+      <li>Row-Level Security (RLS) policies enforce data isolation at the database level</li>
+      <li>API keys stored on your device are obfuscated in local storage</li>
+    </ul>
+
+    <h2>6. Health Data</h2>
+    <p>Health data integration is entirely optional and requires explicit consent for each metric category (activity, vitals, sleep, nutrition, body measurements).</p>
+    <ul>
+      <li>Raw health data is processed on your device only</li>
+      <li>Only daily aggregated summaries are shared with your care circles</li>
+      <li>You can revoke health data sharing at any time in Settings</li>
+      <li>Upon disconnection, shared health data is deleted from our servers within 24 hours</li>
+    </ul>
+    <p>We comply with Apple's HealthKit guidelines. Health data is never used for advertising, marketing, or sold to third parties.</p>
+
+    <h2>7. Data Retention</h2>
+    <ul>
+      <li>Check-in responses: Retained for the lifetime of the circle</li>
+      <li>AI summaries and nudges: Retained for 90 days, then auto-deleted</li>
+      <li>Voice notes: Retained for 30 days after transcription</li>
+      <li>Vault data: Retained until you delete it or your account is deleted</li>
+      <li>Health data: Retained for 90 days on our servers; on-device data follows your OS settings</li>
+    </ul>
+
+    <h2>8. Your Rights (GDPR & CCPA)</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> — Request a copy of all your personal data</li>
+      <li><strong>Rectify</strong> — Update or correct your information</li>
+      <li><strong>Delete</strong> — Request complete deletion of your account and all associated data. You can initiate this from Settings > Delete Account. Deletion is completed within 30 days.</li>
+      <li><strong>Port</strong> — Request your data in a machine-readable format</li>
+      <li><strong>Withdraw consent</strong> — Revoke health data sharing or notification permissions at any time</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:privacy@tendai.app">privacy@tendai.app</a>.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>Tend.ai is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us immediately.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. We will notify you of any material changes via in-app notification or email. Continued use of Tend.ai after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>For privacy questions or data requests:</p>
+    <p>Email: <a href="mailto:privacy@tendai.app">privacy@tendai.app</a></p>
+
+    <div class="footer">
+      <p>&copy; 2026 Tend.ai. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
